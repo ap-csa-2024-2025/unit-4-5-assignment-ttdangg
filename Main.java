@@ -7,7 +7,12 @@ public class Main
     // Make sure to test your methods here
     // printNTimes("code", 3);
     // printNums();
-    uprightNumberTriangle(5);
+    // uprightNumberTriangle(5);
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Print the height of the tree");
+    int x = sc.nextInt();
+    starTree(x);
+    // multTable();
   }
 
   public static void printNTimes(String word, int N)
@@ -47,13 +52,33 @@ public class Main
     }
   }
 
-  public static void starTree()
+  public static void starTree(int height)
   {
-    // code solution here
+    
+    for (int i = 0; i<height; i++)
+    {
+      for (int j = 0; j<i; j++)
+      {
+        System.out.print(" ");
+      }
+      for (int star = i; star<height; star++)
+      {
+        System.out.print("* ");
+      }
+      System.out.println();
+    }
   }
 
   public static void multTable()
   {
-    // code solution here
+    int size = 10;
+    for (int i = 1; i<=size; i++ )
+    {
+      for (int j = 1; j <= size; j++)
+      {
+        System.out.print(i*j + "\t");
+      }
+      System.out.println();
+    }
   }
 }
